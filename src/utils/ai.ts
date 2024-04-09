@@ -4,7 +4,7 @@ import { PromptTemplate } from '@langchain/core/prompts';
 const randColor = () => '#'+(Math.random()*0xFFFFFF<<0).toString(16);
 
 const example = {
-    tree: () => `<svg width="150" height="150" xmlns="http://www.w3.org/2000/svg">
+    tree: () => `<svg width="250" height="250" xmlns="http://www.w3.org/2000/svg">
     <desc>A side view of a tree with brown trunk, green leaves, and blue sky background.</desc>
       <rect x="0" y="0" width="150" height="150" fill="${randColor()}" /> <!--background-->
       <rect x="70" y="110" width="10" height="40" fill="#8B4513" /> <!--trunk-->
