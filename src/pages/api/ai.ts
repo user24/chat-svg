@@ -8,18 +8,15 @@ export default async function handler(
 
   const { query } = req;
 
-  const answer = await ai.ask({
+  const answers = await ai.ask({
     key: process.env.OPENAI_KEY as string,
     topic: query.topic as string,
     // template: `Create minimal svg file,
     //   that renders {topic}.
     //   Include a desc attribute. Use complimentary color theory.`
-    template: `
-      Return three svgs, 150x150, that each render a simple '{topic}'.
-      Make each one quite different.
-      Use different shades of color for each.
-    `
+    template: `Create a simple 150x150 svg file that renders a {topic}
+    (around 5 elements). Use complimentary shades of the same color.`
   });
   
-  res.status(200).json({ answer })
+  res.status(200).json({ answers })
 }

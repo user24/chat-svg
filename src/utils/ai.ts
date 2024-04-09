@@ -21,16 +21,17 @@ const ask = async ({key, topic, template=''}:{key:string, topic:string, template
         await new Promise((r) => setTimeout(r, 500));
         return example.tree();
     }
+
     // https://api.js.langchain.com/classes/langchain_openai.OpenAI.html
     const llm = new OpenAI({
         openAIApiKey: key,
-        maxTokens: 750
+        maxTokens: 500
     });
 
     const prompt = PromptTemplate.fromTemplate(template);
     const formattedPrompt = await prompt.format({ topic });
 
-    return await llm.invoke(formattedPrompt);
+    return await Promise.all([llm.invoke(formattedPrompt), llm.invoke(formattedPrompt), llm.invoke(formattedPrompt)]);
 }
 
 export default {
