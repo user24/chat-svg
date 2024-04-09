@@ -83,6 +83,6 @@ export default function Chat () {
 
     <p>Improve ChatSVG by <a href='https://github.com/user24/chat-svg'>submitting a PR</a> on github.</p>
 
-    <blockquote className={css.hello}><strong>Hello OS/Twitter folks</strong>. If you have this link it's because I've personally shared it with you as an <strong>early preview</strong>. It's not ready for the full force of the internet, so I am trusting you not to share it with like reddit or HN just yet, please. However, I do value your individual feedback so please do reach out via whatever medium I sent you this link and lets talk :)</blockquote>
+    <blockquote className={css.hello}><strong>Hello OS/Twitter folks</strong>. If you have this link it&apos;s because I&apos;ve personally shared it with you as an <strong>early preview</strong>. It&apos;s not ready for the full force of the internet, so I am trusting you not to share it with like reddit or HN just yet, please. However, I do value your individual feedback so please do reach out via whatever medium I sent you this link and let&apos;s talk :)</blockquote>
   </div>;
 }
