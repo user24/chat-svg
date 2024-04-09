@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="150" height="150">
+  <circle cx="75" cy="75" r="50" stroke="#ff9999" stroke-width="10" fill="none">
+    <animate attributeName="r" dur="1.5s" from="20" to="50" repeatCount="indefinite"></animate>
+    <animate attributeName="stroke-dashoffset" dur="1.5s" from="0" to="190" repeatCount="indefinite"></animate>
+    <animate attributeName="stroke-dasharray" dur="1.5s" values="300; 200; 100; 0" repeatCount="indefinite"></animate>
+  </circle>
+  <desc>A pink loading spinner with a white stroke animation</desc>
+</svg>

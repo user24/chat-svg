@@ -24,7 +24,7 @@ const ask = async ({key, topic, template=''}:{key:string, topic:string, template
     // https://api.js.langchain.com/classes/langchain_openai.OpenAI.html
     const llm = new OpenAI({
         openAIApiKey: key,
-        maxTokens: 500
+        maxTokens: 750
     });
 
     const prompt = PromptTemplate.fromTemplate(template);
