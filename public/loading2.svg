@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="150" height="150" desc="This is an image of a pulsing greyscale loading icon.">
+  
+  <rect x="27.5" y="30" width="20" height="90" fill="#404040">
+    <animate attributeName="height" attributeType="XML" values="90; 40; 90" begin="0s" dur="1.5s" repeatCount="indefinite" />
+  </rect>
+  
+  <rect x="52.5" y="30" width="20" height="90" fill="#404040">
+    <animate attributeName="height" attributeType="XML" values="90; 40; 90" begin="0.25s" dur="1.5s" repeatCount="indefinite" />
+  </rect>
+  
+  <rect x="77.5" y="30" width="20" height="90" fill="#404040">
+    <animate attributeName="height" attributeType="XML" values="90; 40; 90" begin="0.5s" dur="1.5s" repeatCount="indefinite" />
+  </rect>
+  
+  <rect x="102.5" y="30" width="20" height="90" fill="#404040">
+    <animate attributeName="height" attributeType="XML" values="90; 40; 90" begin="0.75s" dur="1.5s" repeatCount="indefinite" />
+  </rect>
+  
+  <rect x="127.5" y="30" width="20" height="90" fill="#404040">
+    <animate attributeName="height" attributeType="XML" values="90; 40; 90" begin="1s" dur="1.5s" repeatCount="indefinite" />
+  </rect>
+  
+  <rect x="52.5" y="35" width="20" height="80" fill="#7d868f">
+    <animate attributeName="height" attributeType="XML" values="80; 30; 80" begin="0.25s" dur="1.5s" repeatCount="indefinite" />
+  </rect>
+  
+  <rect x="77.5" y="35" width="20" height="80" fill="#7d868f">
+    <animate attributeName="height" attributeType="XML" values="80; 30; 80" begin="0.5s" dur="1.5s" repeatCount="indefinite" />
+  </rect>
+  
+  <rect x="102.5" y="35" width="20" height="80" fill="#7d868f">
+    <animate attributeName="height" attributeType="XML" values="80; 30; 80" begin="0.75s" dur="1.5s" repeatCount="indefinite" />
+  </rect>
+  
+  <rect x="77.5" y="40" width="20" height="70" fill="#f5f5f5">
+    <animate attributeName="height" attributeType="XML" values="70; 20; 70" begin="0.5s" dur="1.5s" repeatCount="indefinite" />
+  </rect>
+
+</svg>

@@ -1,0 +1,15 @@
+<svg width="150" height="150" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+	<circle cx="75" cy="75" r="50" fill="#FF9F1C">
+		<animate attributeName="r" from="15" to="60" dur="1s" repeatCount="indefinite" />
+		<animate attributeName="opacity" from="1" to="0" dur="1s" repeatCount="indefinite" />
+	</circle>
+	<circle cx="75" cy="75" r="40" fill="#2EC4B6">
+		<animate attributeName="r" from="25" to="70" dur="1.5s" repeatCount="indefinite" />
+		<animate attributeName="opacity" from="1" to="0" dur="1.5s" repeatCount="indefinite" />
+	</circle>
+	<circle cx="75" cy="75" r="30" fill="#FF6B6B">
+		<animate attributeName="r" from="35" to="80" dur="2s" repeatCount="indefinite" />
+		<animate attributeName="opacity" from="1" to="0" dur="2s" repeatCount="indefinite" />
+	</circle>
+	<desc>A pulsing loading icon with three circles of increasing size and complimentary colors (orange, teal, and red).</desc>
+</svg>

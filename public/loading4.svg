@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="150" height="150">
+  <circle cx="75" cy="75" r="50" stroke="hsl(60, 100%, 50%)" stroke-width="10" fill="none">
+    <animateTransform
+      attributeName="transform"
+      attributeType="XML"
+      type="rotate"
+      from="0 75 75"
+      to="360 75 75"
+      dur="1.5s"
+      repeatCount="indefinite"/>
+    <animate
+      attributeName="r"
+      attributeType="XML"
+      from="20"
+      to="50"
+      dur="1.5s"
+      repeatCount="indefinite"
+      values="20;40;20"
+      keyTimes="0;0.5;1"/>
+  </circle>
+</svg>

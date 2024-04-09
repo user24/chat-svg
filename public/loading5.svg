@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="150" height="150" desc="This image is a loading spinner. The spinner is made up of a circle with 8 evenly spaced rectangles around the edge. The background color is a light blue and the spinner is a darker blue.">
+
+  <circle cx="75" cy="75" r="50" fill="#b2d4e7"/>
+  <rect x="50" y="25" width="25" height="10" fill="#4183c4">
+    <animate attributeName="x" from="25" to="70" dur="1.5s" repeatCount="indefinite" />
+  </rect>
+  <rect x="110" y="50" width="10" height="25" fill="#4183c4"/>
+  <rect x="115" y="110" width="25" height="10" fill="#4183c4"/>
+  <rect x="50" y="115" width="10" height="25" fill="#4183c4"/>
+  <rect x="25" y="110" width="25" height="10" fill="#4183c4"/>
+  <rect x="20" y="50" width="10" height="25" fill="#4183c4"/>
+  <rect x="25" y="20" width="25" height="10" fill="#4183c4"/>
+  <rect x="50" y="20" width="10" height="25" fill="#4183c4"/>
+</svg>

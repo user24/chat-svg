@@ -1,0 +1,26 @@
+<svg width="150" height="150" xmlns="http://www.w3.org/2000/svg">
+<circle cx="75" cy="75" r="40" fill="#F2F2F2">
+    <animate attributeName="r" from="50" to="60" dur="2s" repeatCount="indefinite" />
+    <animate attributeName="fill" values="#F2F2F2; #FFFFFF; #F2F2F2" dur="2s" repeatCount="indefinite" />
+  </circle>
+    <circle cx="75" cy="75" r="40" fill="#D4D4D4">
+    <animate attributeName="r" from="40" to="50" dur="2s" repeatCount="indefinite" />
+    <animate attributeName="fill" values="#D4D4D4; #F2F2F2; #D4D4D4" dur="2s" repeatCount="indefinite" />
+  </circle>
+  <circle cx="75" cy="75" r="30" fill="#B6B6B6">
+    <animate attributeName="r" from="30" to="40" dur="2s" repeatCount="indefinite" />
+    <animate attributeName="fill" values="#B6B6B6; #D4D4D4; #B6B6B6" dur="2s" repeatCount="indefinite" />
+  </circle>
+  <circle cx="75" cy="75" r="20" fill="#999999">
+    <animate attributeName="r" from="20" to="30" dur="2s" repeatCount="indefinite" />
+    <animate attributeName="fill" values="#999999; #B6B6B6; #999999" dur="2s" repeatCount="indefinite" />
+  </circle>
+  <circle cx="75" cy="75" r="10" fill="#7D7D7D">
+    <animate attributeName="r" from="10" to="20" dur="2s" repeatCount="indefinite" />
+    <animate attributeName="fill" values="#7D7D7D; #999999; #7D7D7D" dur="2s" repeatCount="indefinite" />
+  </circle>
+  <circle cx="75" cy="75" r="5" fill="#595959">
+    <animate attributeName="r" from="5" to="10" dur="2s" repeatCount="indefinite" />
+    <animate attributeName="fill" values="#595959; #7D7D7D; #595959" dur="2s" repeatCount="indefinite" />
+  </circle>
+</svg>

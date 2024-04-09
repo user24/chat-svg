@@ -1,0 +1,46 @@
+<animateTransform attributeName="transform" attributeType="XML" type="rotate" from="0 75 75" to="360 75 75" dur="1.5s" repeatCount="indefinite" />
+
+<svg xmlns="http://www.w3.org/2000/svg" width="150" height="150">
+  <desc>
+    This SVG file renders a simple loading spinner with a complimentary color scheme.
+  </desc>
+  <circle cx="75" cy="75" r="60" fill="#FFB6C1" stroke="#4682B4" stroke-width="10"/>
+  <circle cx="75" cy="75" r="40" fill="#4682B4" stroke="#FFB6C1" stroke-width="10">
+    <animate attributeName="r" values="0;40" dur="1.5s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="1;0" dur="1.5s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="75" cy="75" r="20" fill="#FFB6C1" stroke="#4682B4" stroke-width="10">
+    <animate attributeName="r" values="0;20" dur="1.5s" repeatCount="indefinite" begin="0.75s"/>
+    <animate attributeName="opacity" values="1;0" dur="1.5s" repeatCount="indefinite" begin="0.75s"/>
+  </circle>
+</svg>
+
+
+<svg xmlns="http://www.w3.org/2000/svg" width="150" height="150" desc="This is a simple loading icon that pulses. It is rendered using complimentary colors and has a size of 150 by 150 pixels.">
+
+  <circle cx="75" cy="75" r="50" fill="#FF6633">
+    <animate attributeName="r" from="50" to="60" begin="0s" dur="0.8s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" from="1" to="0" begin="0s" dur="0.8s" repeatCount="indefinite"/>
+  </circle>
+
+  <circle cx="75" cy="75" r="40" fill="#FFCC33">
+    <animate attributeName="r" from="40" to="50" begin="0s" dur="0.8s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" from="1" to="0" begin="0s" dur="0.8s" repeatCount="indefinite"/>
+  </circle>
+
+  <circle cx="75" cy="75" r="30" fill="#33FFCC">
+    <animate attributeName="r" from="30" to="40" begin="0s" dur="0.8s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" from="1" to="0" begin="0s" dur="0.8s" repeatCount="indefinite"/>
+  </circle>
+
+  <circle cx="75" cy="75" r="20" fill="#3366FF">
+    <animate attributeName="r" from="20" to="30" begin="0s" dur="0.8s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" from="1" to="0" begin="0s" dur="0.8s" repeatCount="indefinite"/>
+  </circle>
+
+  <circle cx="75" cy="75" r="10" fill="#CC33FF">
+    <animate attributeName="r" from="10" to="20" begin="0s" dur="0.8s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" from="1" to="0" begin="0s" dur="0.8s" repeatCount="indefinite"/>
+  </circle>
+
+</svg>

@@ -1,0 +1,23 @@
+.main {
+  margin: auto;
+  width: 50%;
+  border: 1px solid lavender;
+  border-radius: 20px;
+  background: aliceblue;
+  padding: 20px;
+  margin-top: 10%;
+  min-width: 500px;
+}
+.code {
+    width: 500px;
+    border: 1px solid grey;
+    background: #EEE;
+    display: block;
+    padding: 5px;
+    font-size: 12pt;
+    margin: auto;
+    margin-top: 1rem;
+    text-align: left;
+    font-family: monospace;
+    white-space: pre-wrap;
+  }
