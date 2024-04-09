@@ -21,6 +21,7 @@ const suggestRandom = () => {
   return `${pickRandom(adjectives)} ${pickRandom(prompts)}`;
 };
 
+
 export default function Chat () {
 
   const LoadingSpinner = () => <Image
@@ -30,7 +31,7 @@ export default function Chat () {
   />;
   
   const [loading, setLoading] = useState(false);
-  const [result, setResult] = useState(null);
+  const [result, setResult] = useState<string | null>(null);
   const [topic, setTopic] = useState('');
 
   useEffect(() => {
