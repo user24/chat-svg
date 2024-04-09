@@ -63,7 +63,7 @@ export default function Chat () {
 
     {process.env.NEXT_PUBLIC_MOCK_AI ? <p>Dev mode - AI functions are mocked</p> : null}
 
-    {loading ? <LoadingSpinner /> : <div dangerouslySetInnerHTML={{__html: result}} />}
+    {loading ? <LoadingSpinner /> : <div dangerouslySetInnerHTML={{__html: result ?? ''}} />}
 
     <form onSubmit={handleSubmit}>
       <label>
