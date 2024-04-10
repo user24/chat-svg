@@ -25,6 +25,7 @@ const standalonePrompts = [
   'angular spaceship',
   'solar system',
   'car',
+  'rain drops',
   'national flag'
 ];
 
@@ -55,8 +56,8 @@ export default function Chat () {
   const [topic, setTopic] = useState('');
   const [numSubmits, setNumSubmits] = useState(0);
   const submissionSoftLimit = 10;
-  const submissionWarnLimit = 20;
-  const submissionLockout = 50;
+  const submissionWarnLimit = 25;
+  const submissionLockout = 30;
 
   useEffect(() => {
     handleRandom();
@@ -90,8 +91,8 @@ export default function Chat () {
     {numSubmits > submissionSoftLimit && (
       <blockquote className={css.warning}>
         <strong>Hey!</strong> I love that you are experimenting with this so much, let&apos;s have a chat about your experiences?<br />
-        {numSubmits > submissionWarnLimit && <p>Please don&apos;t hammer it too much, every query costs me a fraction of a cent - it adds up quick!</p>}
-        {numSubmits > submissionLockout && <strong>Reached query limit - account disabled</strong>}
+        {numSubmits > submissionWarnLimit && <p>I will have to soft-lock this session soon though to preserve my OpenAI credit.</p>}
+        {numSubmits > submissionLockout && <strong>Reached request limit - this session has been locked. Would love to hear your thoughts on areas for improvement.</strong>}
       </blockquote>
       )}
 
@@ -121,7 +122,6 @@ export default function Chat () {
     <p>A quick and dirty side project by <a href='https://solidred.co.uk'>Howard Yeend</a>.</p>
 
     <p>Improve ChatSVG by <a href='https://github.com/user24/chat-svg'>submitting a PR</a> on github.</p>
-
 
   </div>;
 }

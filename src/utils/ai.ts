@@ -19,7 +19,7 @@ const example = {
 const ask = async ({key, topic, template=''}:{key:string, topic:string, template?:string}) => {
     if (process.env.NEXT_PUBLIC_MOCK_AI) {
         await new Promise((r) => setTimeout(r, 500));
-        return example.tree();
+        return [example.tree()];
     }
 
     // https://api.js.langchain.com/classes/langchain_openai.OpenAI.html
