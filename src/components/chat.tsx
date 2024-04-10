@@ -89,7 +89,7 @@ export default function Chat () {
 
     {numSubmits > submissionSoftLimit && (
       <blockquote className={css.warning}>
-        <strong>Hey!</strong> I love that you are experimenting with this so much, let's have a chat about your experiences?<br />
+        <strong>Hey!</strong> I love that you are experimenting with this so much, let&apos;s have a chat about your experiences?<br />
         {numSubmits > submissionWarnLimit && <p>Please don&apos;t hammer it too much, every query costs me a fraction of a cent - it adds up quick!</p>}
         {numSubmits > submissionLockout && <strong>Reached query limit - account disabled</strong>}
       </blockquote>
