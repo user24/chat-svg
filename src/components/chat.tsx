@@ -10,7 +10,7 @@ import {pickRandom} from '../utils/random';
 const adjectives = [''];
 const prompts = [
   'robot',
-  'green tree with brown trunk',
+  'tree',
   'stick man',
   'cat',
   'animal face',
@@ -22,7 +22,8 @@ const standalonePrompts = [
   'computer icon',
   'angular spaceship',
   'solar system',
-  'car'
+  'car',
+  'national flag'
 ];
 
 function upperFirst(str:string) {

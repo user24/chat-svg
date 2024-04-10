@@ -31,7 +31,13 @@ const ask = async ({key, topic, template=''}:{key:string, topic:string, template
     const prompt = PromptTemplate.fromTemplate(template);
     const formattedPrompt = await prompt.format({ topic });
 
-    return await Promise.all([llm.invoke(formattedPrompt), llm.invoke(formattedPrompt), llm.invoke(formattedPrompt)]);
+    let count = 1;
+    const invokations = [];
+    while (count--) {
+        invokations.push(llm.invoke(formattedPrompt));
+    }
+
+    return await Promise.all(invokations);
 }
 
 export default {

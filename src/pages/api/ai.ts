@@ -14,8 +14,8 @@ export default async function handler(
     // template: `Create minimal svg file,
     //   that renders {topic}.
     //   Include a desc attribute. Use complimentary color theory.`
-    template: `Create a simple 150x150 svg file that renders a {topic}
-    (around 5 elements). Use complimentary shades of the same color.`
+    template: `Create a simple 150x150 svg file that renders a {topic}.
+    (around 5 elements). Use contrasting colors in a pleasing palette`
   });
   
   res.status(200).json({ answers })
