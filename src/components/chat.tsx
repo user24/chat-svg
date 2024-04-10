@@ -7,11 +7,13 @@ import Image from 'next/image';
 import {extractSvgContents} from '../utils/svgExtract';
 import {pickRandom} from '../utils/random';
 
-const adjectives = [''];
+const adjectives = ['blocky', 'bubbly'];
 const prompts = [
   'robot',
   'tree',
   'stick man',
+  'caterpillar',
+  'chess icon',
   'cat',
   'animal face',
   'app icon',
@@ -51,6 +53,10 @@ export default function Chat () {
   const [loading, setLoading] = useState(false);
   const [result, setResult] = useState<string[] | null>(null);
   const [topic, setTopic] = useState('');
+  const [numSubmits, setNumSubmits] = useState(0);
+  const submissionSoftLimit = 10;
+  const submissionWarnLimit = 20;
+  const submissionLockout = 50;
 
   useEffect(() => {
     handleRandom();
@@ -63,6 +69,7 @@ export default function Chat () {
   const handleSubmit = async (e:FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setLoading(true);
+    setNumSubmits(numSubmits+1);
     
     const response = await fetch(`/api/ai?topic=${topic}`);
     const data = await response.json();
@@ -80,7 +87,15 @@ export default function Chat () {
     />
     <h1>ChatSVG</h1>
 
-    {process.env.NEXT_PUBLIC_MOCK_AI ? <p>Dev mode - AI functions are mocked</p> : null}
+    {numSubmits > submissionSoftLimit && (
+      <blockquote className={css.warning}>
+        <strong>Hey!</strong> I love that you are experimenting with this so much, let's have a chat about your experiences?<br />
+        {numSubmits > submissionWarnLimit && <p>Please don&apos;t hammer it too much, every query costs me a fraction of a cent - it adds up quick!</p>}
+        {numSubmits > submissionLockout && <strong>Reached query limit - account disabled</strong>}
+      </blockquote>
+      )}
+
+    {process.env.NEXT_PUBLIC_MOCK_AI && <p>Dev mode - AI functions are mocked</p>}
 
     {loading ? <LoadingSpinner /> : <div dangerouslySetInnerHTML={{__html: result ?? ''}} />}
 
@@ -91,7 +106,7 @@ export default function Chat () {
       </label>
       <button type="button" onClick={handleRandom}>Suggest one</button>
       <br />
-      <button disabled={loading} className={css.createButton}>Create</button>
+      <button disabled={loading || numSubmits > submissionLockout} className={css.createButton}>Create</button>
     </form>
 
     {result && <>
@@ -99,10 +114,14 @@ export default function Chat () {
       <code className={css.code}>{result}</code>
     </>}
 
+    <blockquote className={css.hello}><strong>What is this for?</strong> Right now it&apos;s just a side project to play with AI tech. The main effort has gone into layering code on top of the AI output to reliably extract SVG files without having to do much prompt engineering. A future effort will attempt to improve the quality of the generated SVGs. tldr; fun!</blockquote>
+
+    <blockquote className={css.hello}><strong>Hello OS/Twitter folks</strong>. If you have this link it&apos;s because I&apos;ve personally shared it with you as an <strong>early preview</strong>. It&apos;s not ready for the full force of the internet, so I am trusting you not to share it with like reddit or HN just yet, please. However, I do value your individual feedback so please do reach out via whatever medium I sent you this link and let&apos;s talk :)</blockquote>
+
     <p>A quick and dirty side project by <a href='https://solidred.co.uk'>Howard Yeend</a>.</p>
 
     <p>Improve ChatSVG by <a href='https://github.com/user24/chat-svg'>submitting a PR</a> on github.</p>
 
-    <blockquote className={css.hello}><strong>Hello OS/Twitter folks</strong>. If you have this link it&apos;s because I&apos;ve personally shared it with you as an <strong>early preview</strong>. It&apos;s not ready for the full force of the internet, so I am trusting you not to share it with like reddit or HN just yet, please. However, I do value your individual feedback so please do reach out via whatever medium I sent you this link and let&apos;s talk :)</blockquote>
+
   </div>;
 }

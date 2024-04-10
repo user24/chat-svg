@@ -33,3 +33,9 @@
   padding: 20px;
   border-radius: 20px;
 }
+.warning {
+  background-color: lightsalmon;
+  padding: 20px;
+  border-radius: 20px;
+
+}
